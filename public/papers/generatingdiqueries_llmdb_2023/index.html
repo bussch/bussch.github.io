@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Generating Data Augmentation Queries Using Large Language Models | Christopher Buss</title>
+<meta name="keywords" content="data integration, databases, online learning, reinforcement learning, information retrieval, large language models, machine learning">
+<meta name="description" content="This paper evaluates parameter efficent techniques for producing more effective data integration queries.">
+<meta name="author" content="Christopher Buss,&thinsp;Jasmin Mousavi,&thinsp;Mikhail Tokarev,&thinsp;Arash Termehchy,&thinsp;David Maier,&thinsp;Stefan Lee">
+<link rel="canonical" href="https://pascalmichaillat.org/hugo-website/papers/generatingdiqueries_llmdb_2023/">
+<link crossorigin="anonymous" href="/hugo-website/assets/css/stylesheet.d6cf4a8fa527330d9574f36d8d000fdaf90ca838ff09ab72fc27d3cb7ca1ddc5.css" integrity="sha256-1s9Kj6UnMw2VdPNtjQAP2vkMqDj/Caty/CfTy3yh3cU=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://pascalmichaillat.org/hugo-website/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://pascalmichaillat.org/hugo-website/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://pascalmichaillat.org/hugo-website/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://pascalmichaillat.org/hugo-website/apple-touch-icon.png">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://pascalmichaillat.org/hugo-website/papers/generatingdiqueries_llmdb_2023/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript><meta property="og:title" content="Generating Data Augmentation Queries Using Large Language Models" />
+<meta property="og:description" content="This paper evaluates parameter efficent techniques for producing more effective data integration queries." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://pascalmichaillat.org/hugo-website/papers/generatingdiqueries_llmdb_2023/" /><meta property="article:section" content="papers" />
+<meta property="article:published_time" content="2023-07-01T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-07-01T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Generating Data Augmentation Queries Using Large Language Models"/>
+<meta name="twitter:description" content="This paper evaluates parameter efficent techniques for producing more effective data integration queries."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Papers",
+      "item": "https://pascalmichaillat.org/hugo-website/papers/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Generating Data Augmentation Queries Using Large Language Models",
+      "item": "https://pascalmichaillat.org/hugo-website/papers/generatingdiqueries_llmdb_2023/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Generating Data Augmentation Queries Using Large Language Models",
+  "name": "Generating Data Augmentation Queries Using Large Language Models",
+  "description": "This paper evaluates parameter efficent techniques for producing more effective data integration queries.",
+  "keywords": [
+    "data integration", "databases", "online learning", "reinforcement learning", "information retrieval", "large language models", "machine learning"
+  ],
+  "articleBody": " Related material Paper Code + Datasets Slides (LLMDB ‘23 @ VLDB) Poster (TaDa ‘23 @ NuerIPS) Abstract Users often want to augment entities in their datasets with relevant information from external data sources. As many external sources are accessible only via keyword-search interfaces, a user usually has to manually formulate a keyword query that extracts relevant information for each entity. This is challenging as many data sources contain numerous tuples, only a small fraction of which may be relevant. Moreover, different datasets may represent the same information in distinct forms and under different terms. In such cases, it is difficult to formulate a query that precisely retrieves information relevant to a specific entity. Current methods for information enrichment mainly rely on resource-intensive manual effort to formulate queries to discover relevant information. However, it is often important for users to get initial answers quickly and without substantial investment in resources (such as human attention). Thus, as an alternative to manually writing mappings from entities to queries, one can learn these mappings progressively by leveraging end users’ feedback. We evaluate the use of parameter efficient techniques for leveraging a pretrained large language model (LLM) for this task of online query policy learning.\nCitation Christopher Buss, Jasmin Mousavi, Mikhail Tokarev, Arash Termehchy, David Maier, and Stefan Lee. 2023. ”Generating Data Augmentation Queries Using Large Language Models”, Joint Proceedings of Workshops at the 49th International Conference on Very Large Data Bases (VLDB 2023). Also presented at the 2nd NeurIPS Table Representation Learning Workshop, December, 2023.\n@inproceedings{buss2023generating, title = {Generating Data Augmentation Queries Using Large Language Models}, author = {Buss, Christopher and Mousavi, Jasmin and Tokarev, Mikhail and Termehchy, Arash and Maier, David and Lee, Stefan}, numpages = {5}, url = {https://ceur-ws.org/Vol-3462/LLMDB3.pdf}, crossref = {LLMDB23} } @proceedings{LLMDB23, booktitle = {Workshop on Databases and Large Language Models (LLMDB)}, year = {2023}, number = {3462}, series = {CEUR Workshop Proceedings}, address = {Aachen}, issn = {1613-0073}, url = {https://ceur-ws.org/Vol-3462/}, venue = {Vancouver, BC}, eventdate = {2023-09-01}, title = {Joint Proceedings of Workshops at the 49th International Conference on Very Large Data Bases (VLDB 2023)} } ",
+  "wordCount" : "348",
+  "inLanguage": "en",
+  "datePublished": "2023-07-01T00:00:00Z",
+  "dateModified": "2023-07-01T00:00:00Z",
+  "author":[{
+    "@type": "Person",
+    "name": "Christopher Buss"
+  }, {
+    "@type": "Person",
+    "name": "Jasmin Mousavi"
+  }, {
+    "@type": "Person",
+    "name": "Mikhail Tokarev"
+  }, {
+    "@type": "Person",
+    "name": "Arash Termehchy"
+  }, {
+    "@type": "Person",
+    "name": "David Maier"
+  }, {
+    "@type": "Person",
+    "name": "Stefan Lee"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://pascalmichaillat.org/hugo-website/papers/generatingdiqueries_llmdb_2023/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Christopher Buss",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://pascalmichaillat.org/hugo-website/favicon.ico"
+    }
+  }
+}
+</script>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" integrity="sha384-wcIxkf4k558AjM3Yz3BBFQUbk/zgIYC2R0QpeeYb+TwlBVMrlgLqwRjRtGZiK7ww" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js" integrity="sha384-hIoBPJpTUs74ddyc4bFZSM1TVlQDA60VBbJS0oA934VSz82sBx1X7kSx2ATBDIyd" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"
+  onload="renderMathInElement(document.body);"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false},
+            {left: "\\begin{equation}", right: "\\end{equation}", display: true},
+            {left: "\\begin{equation*}", right: "\\end{equation*}", display: true},
+            {left: "\\begin{align}", right: "\\end{align}", display: true},
+            {left: "\\begin{align*}", right: "\\end{align*}", display: true},
+            {left: "\\begin{alignat}", right: "\\end{alignat}", display: true},
+            {left: "\\begin{gather}", right: "\\end{gather}", display: true},
+            {left: "\\begin{CD}", right: "\\end{CD}", display: true},
+          ],
+          throwOnError : false
+        });
+    });
+</script>
+ 
+
+
+</head>
+
+<body class="" id="top">
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://pascalmichaillat.org/hugo-website/" accesskey="h" title="Christopher Buss">
+                <img src="https://pascalmichaillat.org/hugo-website/favicon.ico" alt="" aria-label="logo"
+                    height="18"
+                    width="18">Christopher Buss</a>
+            <div class="logo-switches">
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://pascalmichaillat.org/hugo-website/papers/" title="Papers">
+                    <span>Papers</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://pascalmichaillat.org/hugo-website/courses/" title="Courses">
+                    <span>Courses</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://pascalmichaillat.org/hugo-website/data/" title="Data">
+                    <span>Data</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+    <main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Generating Data Augmentation Queries Using Large Language Models
+    </h1>
+    <div class="post-meta"><span title='2023-07-01 00:00:00 +0000 UTC'>July 2023</span>&nbsp;&middot;&nbsp;Christopher Buss,&thinsp;Jasmin Mousavi,&thinsp;Mikhail Tokarev,&thinsp;Arash Termehchy,&thinsp;David Maier,&thinsp;Stefan Lee
+
+</div>
+  </header> 
+  <div class="post-content"><hr>
+<h5 id="related-material">Related material</h5>
+<ul>
+<li><a href="LLMDB3.pdf">Paper</a></li>
+<li><a href="https://github.com/bussch/QueryBasedEntityAugmentation" target="_blank">Code + Datasets</a></li>
+<li><a href="augmentation_queries-llmdb23.pdf">Slides (LLMDB &lsquo;23 @ VLDB)</a></li>
+<li><a href="augmentation_queries-trl-neurips_2023.pdf">Poster (TaDa &lsquo;23 @ NuerIPS)</a></li>
+</ul>
+<hr>
+<h5 id="abstract">Abstract</h5>
+<p>Users often want to augment entities in their datasets with relevant information from external data sources. As many external sources are accessible only via keyword-search interfaces, a user usually has to manually formulate a keyword query that extracts relevant information for each entity. This is challenging as many data sources contain numerous tuples, only a small fraction of which may be relevant. Moreover, different datasets may represent the same information in distinct forms and under different terms. In such cases, it is difficult to formulate a query that precisely retrieves information relevant to a specific entity. Current methods for information enrichment mainly rely on resource-intensive manual effort to formulate queries to discover relevant information. However, it is often important for users to get initial answers quickly and without substantial investment in resources (such as human attention). Thus, as an alternative to manually writing mappings from entities to queries, one can learn these mappings progressively by leveraging end users’ feedback. We evaluate the use of parameter efficient techniques for leveraging a pretrained large language model (LLM) for this task of online query policy learning.</p>
+<hr>
+<h5 id="citation">Citation</h5>
+<p><strong>Christopher Buss</strong>, Jasmin Mousavi, Mikhail Tokarev, Arash Termehchy, David Maier, and Stefan Lee. 2023. ”Generating Data Augmentation Queries Using Large Language Models”, <em>Joint Proceedings of Workshops at the 49th International Conference on Very Large Data Bases (VLDB 2023)</em>.
+<em>Also presented at the 2nd NeurIPS Table Representation Learning Workshop, December, 2023.</em></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-BibTeX" data-lang="BibTeX"><span style="display:flex;"><span><span style="color:#0a0;text-decoration:underline">@inproceedings</span>{buss2023generating,
+</span></span><span style="display:flex;"><span>  <span style="color:#1e90ff">title</span> = <span style="color:#a50">{Generating Data Augmentation Queries Using Large Language Models}</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#1e90ff">author</span> = <span style="color:#a50">{Buss, Christopher and Mousavi, Jasmin and Tokarev, Mikhail and Termehchy, Arash and Maier, David and Lee, Stefan}</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#1e90ff">numpages</span> = <span style="color:#a50">{5}</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#1e90ff">url</span> = <span style="color:#a50">{https://ceur-ws.org/Vol-3462/LLMDB3.pdf}</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#1e90ff">crossref</span> = <span style="color:#a50">{LLMDB23}</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#0a0;text-decoration:underline">@proceedings</span>{LLMDB23,
+</span></span><span style="display:flex;"><span>  <span style="color:#1e90ff">booktitle</span> = <span style="color:#a50">{Workshop on Databases and Large Language Models (LLMDB)}</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#1e90ff">year</span> = <span style="color:#a50">{2023}</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#1e90ff">number</span> = <span style="color:#a50">{3462}</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#1e90ff">series</span> = <span style="color:#a50">{CEUR Workshop Proceedings}</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#1e90ff">address</span> = <span style="color:#a50">{Aachen}</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#1e90ff">issn</span> = <span style="color:#a50">{1613-0073}</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#1e90ff">url</span> = <span style="color:#a50">{https://ceur-ws.org/Vol-3462/}</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#1e90ff">venue</span> = <span style="color:#a50">{Vancouver, BC}</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#1e90ff">eventdate</span> = <span style="color:#a50">{2023-09-01}</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#1e90ff">title</span> = <span style="color:#a50">{Joint Proceedings of Workshops at the 49th International Conference on Very Large Data Bases (VLDB 2023)}</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://pascalmichaillat.org/hugo-website/tags/data-integration/">Data Integration</a></li>
+      <li><a href="https://pascalmichaillat.org/hugo-website/tags/databases/">Databases</a></li>
+      <li><a href="https://pascalmichaillat.org/hugo-website/tags/online-learning/">Online Learning</a></li>
+      <li><a href="https://pascalmichaillat.org/hugo-website/tags/reinforcement-learning/">Reinforcement Learning</a></li>
+      <li><a href="https://pascalmichaillat.org/hugo-website/tags/information-retrieval/">Information Retrieval</a></li>
+      <li><a href="https://pascalmichaillat.org/hugo-website/tags/large-language-models/">Large Language Models</a></li>
+      <li><a href="https://pascalmichaillat.org/hugo-website/tags/machine-learning/">Machine Learning</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2025 <a href="https://pascalmichaillat.org/hugo-website/">Christopher Buss</a></span> ·     
+    <span>
+    Powered by 
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/pmichaillat/hugo-website/" rel="noopener" target="_blank">a modified version</a>
+         of 
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+</html>
