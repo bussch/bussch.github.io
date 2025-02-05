@@ -1,4 +1,4 @@
-baseURL: "https://pascalmichaillat.org/hugo-website/" 
+baseURL: "https://bussch.github.io/"
 title: Christopher Buss
 theme: PaperMod
 
@@ -49,7 +49,7 @@ params:
           title: Christopher Buss (He / Him)
           subtitle: "I am a a PhD student in the School of Electrical Engineering and Computer Science at Oregon State University. I'm interested in how AI can be used to reduce the manual effort required in data integration tasks, particularly for practical instances where training data is rare (or altogether non-existent!). Prior to OSU, I worked at a small software company, performing data processing jobs. I'm originally from Wisconsin and received a double-major in computer science and English at UW-Parkside in Kenosha, WI. 
           **I am on the academic job market for Fall 2025 positions.**"
-          imageUrl: "its_me.jpg"
+          imageUrl: "christopherbuss.jpg"
           imageWidth: 160
           imageHeight: 160
           buttons:
