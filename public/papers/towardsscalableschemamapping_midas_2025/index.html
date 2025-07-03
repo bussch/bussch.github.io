@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Towards Scalable Schema Mapping using Large Language Models | Christopher Buss</title>
+<meta name="keywords" content="data integration, databases, schema mapping, large language models, machine learning">
+<meta name="description" content="This paper was accepted and presented at MIDAS 2025. The official publication is forthcoming.">
+<meta name="author" content="Christopher Buss,&thinsp;Mahdis Safari,&thinsp;Arash Termehchy,&thinsp;Stefan Lee,&thinsp;David Maier">
+<link rel="canonical" href="http://localhost:1313/papers/towardsscalableschemamapping_midas_2025/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.d6cf4a8fa527330d9574f36d8d000fdaf90ca838ff09ab72fc27d3cb7ca1ddc5.css" integrity="sha256-1s9Kj6UnMw2VdPNtjQAP2vkMqDj/Caty/CfTy3yh3cU=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/papers/towardsscalableschemamapping_midas_2025/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript><meta property="og:title" content="Towards Scalable Schema Mapping using Large Language Models" />
+<meta property="og:description" content="This paper was accepted and presented at MIDAS 2025. The official publication is forthcoming." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/papers/towardsscalableschemamapping_midas_2025/" /><meta property="article:section" content="papers" />
+<meta property="article:published_time" content="2025-06-01T00:00:00+00:00" />
+<meta property="article:modified_time" content="2025-06-01T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Towards Scalable Schema Mapping using Large Language Models"/>
+<meta name="twitter:description" content="This paper was accepted and presented at MIDAS 2025. The official publication is forthcoming."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Papers",
+      "item": "http://localhost:1313/papers/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Towards Scalable Schema Mapping using Large Language Models",
+      "item": "http://localhost:1313/papers/towardsscalableschemamapping_midas_2025/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Towards Scalable Schema Mapping using Large Language Models",
+  "name": "Towards Scalable Schema Mapping using Large Language Models",
+  "description": "This paper was accepted and presented at MIDAS 2025. The official publication is forthcoming.",
+  "keywords": [
+    "data integration", "databases", "schema mapping", "large language models", "machine learning"
+  ],
+  "articleBody": " Related material Paper Extended Report (ArXiv) Slides Abstract The growing need to integrate information from many diverse sources poses significant scalability challenges for data integration systems. These systems often rely on manually written schema mappings, which are complex and costly to maintain. While recent advances suggest that large language models (LLMs) can assist in automating schema mapping, key challenges remain. We motivate future research in schema mapping generation by highlighting key challenges, presenting a competitive bidirectional schema matching pipeline, and exploring the limitations of current methods for generating more complex mappings.\nCitation Christopher Buss, Mahdis Safari, Arash Termehchy, Stefan Lee, and David Maier. 2025. ”Towards Scalable Schema Mapping using Large Language Models”, SIGMOD Workshop on Modern Integrated Database and AI Systems (MIDAS), June 2025.\n@article{buss2025towards, title={Towards Scalable Schema Mapping using Large Language Models}, author={Buss, Christopher and Safari, Mahdis and Termehchy, Arash and Lee, Stefan and Maier, David}, journal={arXiv preprint arXiv:2505.24716}, year={2025} } ",
+  "wordCount" : "152",
+  "inLanguage": "en",
+  "datePublished": "2025-06-01T00:00:00Z",
+  "dateModified": "2025-06-01T00:00:00Z",
+  "author":[{
+    "@type": "Person",
+    "name": "Christopher Buss"
+  }, {
+    "@type": "Person",
+    "name": "Mahdis Safari"
+  }, {
+    "@type": "Person",
+    "name": "Arash Termehchy"
+  }, {
+    "@type": "Person",
+    "name": "Stefan Lee"
+  }, {
+    "@type": "Person",
+    "name": "David Maier"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://localhost:1313/papers/towardsscalableschemamapping_midas_2025/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Christopher Buss",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://localhost:1313/favicon.ico"
+    }
+  }
+}
+</script>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" integrity="sha384-wcIxkf4k558AjM3Yz3BBFQUbk/zgIYC2R0QpeeYb+TwlBVMrlgLqwRjRtGZiK7ww" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js" integrity="sha384-hIoBPJpTUs74ddyc4bFZSM1TVlQDA60VBbJS0oA934VSz82sBx1X7kSx2ATBDIyd" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"
+  onload="renderMathInElement(document.body);"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false},
+            {left: "\\begin{equation}", right: "\\end{equation}", display: true},
+            {left: "\\begin{equation*}", right: "\\end{equation*}", display: true},
+            {left: "\\begin{align}", right: "\\end{align}", display: true},
+            {left: "\\begin{align*}", right: "\\end{align*}", display: true},
+            {left: "\\begin{alignat}", right: "\\end{alignat}", display: true},
+            {left: "\\begin{gather}", right: "\\end{gather}", display: true},
+            {left: "\\begin{CD}", right: "\\end{CD}", display: true},
+          ],
+          throwOnError : false
+        });
+    });
+</script>
+ 
+
+
+</head>
+
+<body class="" id="top">
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Christopher Buss">
+                <img src="http://localhost:1313/favicon.ico" alt="" aria-label="logo"
+                    height="18"
+                    width="18">Christopher Buss</a>
+            <div class="logo-switches">
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/papers/" title="Papers">
+                    <span>Papers</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/courses/" title="Courses">
+                    <span>Courses</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/data/" title="Data">
+                    <span>Data</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+    <main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Towards Scalable Schema Mapping using Large Language Models
+    </h1>
+    <div class="post-meta"><span title='2025-06-01 00:00:00 +0000 UTC'>June 2025</span>&nbsp;&middot;&nbsp;Christopher Buss,&thinsp;Mahdis Safari,&thinsp;Arash Termehchy,&thinsp;Stefan Lee,&thinsp;David Maier
+
+</div>
+  </header> 
+  <div class="post-content"><hr>
+<h5 id="related-material">Related material</h5>
+<ul>
+<li><a href="scalable_schema_mapping-technical_report.pdf">Paper</a></li>
+<li><a href="https://arxiv.org/abs/2505.24716" target="_blank">Extended Report (ArXiv)</a></li>
+<li><a href="MIDAS_2025_presentation.pdf">Slides</a></li>
+</ul>
+<hr>
+<h5 id="abstract">Abstract</h5>
+<p>The growing need to integrate information from many diverse sources poses significant scalability challenges for data integration systems. These systems often rely on manually written schema mappings, which are complex and costly to maintain. While recent advances suggest that large language models (LLMs) can assist in automating schema mapping, key challenges remain. We motivate future research in schema mapping generation by highlighting key challenges, presenting a competitive bidirectional schema matching pipeline, and exploring the limitations of current methods for generating more complex mappings.</p>
+<hr>
+<h5 id="citation">Citation</h5>
+<p><strong>Christopher Buss</strong>, Mahdis Safari, Arash Termehchy, Stefan Lee, and David Maier. 2025. ”Towards Scalable Schema Mapping using Large Language Models”, <em>SIGMOD Workshop on Modern Integrated Database and AI Systems (MIDAS)</em>, June 2025.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-BibTeX" data-lang="BibTeX"><span style="display:flex;"><span><span style="color:#0a0;text-decoration:underline">@article</span>{buss2025towards,
+</span></span><span style="display:flex;"><span>  <span style="color:#1e90ff">title</span>=<span style="color:#a50">{Towards Scalable Schema Mapping using Large Language Models}</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#1e90ff">author</span>=<span style="color:#a50">{Buss, Christopher and Safari, Mahdis and Termehchy, Arash and Lee, Stefan and Maier, David}</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#1e90ff">journal</span>=<span style="color:#a50">{arXiv preprint arXiv:2505.24716}</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#1e90ff">year</span>=<span style="color:#a50">{2025}</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/data-integration/">Data Integration</a></li>
+      <li><a href="http://localhost:1313/tags/databases/">Databases</a></li>
+      <li><a href="http://localhost:1313/tags/schema-mapping/">Schema Mapping</a></li>
+      <li><a href="http://localhost:1313/tags/large-language-models/">Large Language Models</a></li>
+      <li><a href="http://localhost:1313/tags/machine-learning/">Machine Learning</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2025 <a href="http://localhost:1313/">Christopher Buss</a></span> ·     
+    <span>
+    Powered by 
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/pmichaillat/hugo-website/" rel="noopener" target="_blank">a modified version</a>
+         of 
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+</html>
